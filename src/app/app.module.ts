@@ -48,6 +48,9 @@ import { IpoFundingComponent } from './ipo-funding/ipo-funding.component';
 import { UnlistedSharesComponent } from './unlisted-shares/unlisted-shares.component';
 import { P2pLendingComponent } from './p2p-lending/p2p-lending.component';
 import { TradeReplayComponent } from './trade-replay/trade-replay.component';
+import { GoalItemComponent } from './goal-item/goal-item.component';
+import { AddNewGoalDialogComponent } from './add-new-goal-dialog/add-new-goal-dialog.component';
+import { GoalComponent } from './goal/goal.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +62,10 @@ import { TradeReplayComponent } from './trade-replay/trade-replay.component';
     IpoFundingComponent,
     UnlistedSharesComponent,
     P2pLendingComponent,
-    TradeReplayComponent
+    TradeReplayComponent,
+    GoalItemComponent,
+    AddNewGoalDialogComponent,
+    GoalComponent
   ],
   imports: [
     BrowserModule,

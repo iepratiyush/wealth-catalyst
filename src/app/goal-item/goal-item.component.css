@@ -1,0 +1,25 @@
+.goal-item-card {
+    cursor: pointer;
+}
+
+.icon {
+    padding: 16px 0px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-chip {
+    font-size: 12px;
+}
+
+.mat-standard-chip {
+    min-height: 24px;
+}
+
+.mat-chip-list {
+    padding-top: 4px;
+    padding-bottom: 16px;
+}

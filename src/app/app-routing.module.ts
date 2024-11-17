@@ -8,6 +8,7 @@ import { IpoFundingComponent } from './ipo-funding/ipo-funding.component';
 import { UnlistedSharesComponent } from './unlisted-shares/unlisted-shares.component';
 import { P2pLendingComponent } from './p2p-lending/p2p-lending.component';
 import { TradeReplayComponent } from './trade-replay/trade-replay.component';
+import { GoalComponent } from './goal/goal.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'unlisted-shares', component: UnlistedSharesComponent },
   { path: 'p2p-lending', component:  P2pLendingComponent},
   { path: 'trade-replay', component:  TradeReplayComponent},
+  { path: 'goal/:id', component:  GoalComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
