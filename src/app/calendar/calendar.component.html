@@ -12,7 +12,7 @@
       <div *ngFor="let date of dates" class="custom-cell" (click)="selectDate(date)">
         <div class="date">{{ date.day }}</div>
         <div class="events">
-            <div *ngFor="let event of date.events.slice(0, 2)">{{ event }}</div>
+            <div *ngFor="let event of eventService.getEvents(currentYear, currentMonthIndex, date.day).slice(0, 2)">{{ event }}</div>
         </div>
       </div>
     </div>
