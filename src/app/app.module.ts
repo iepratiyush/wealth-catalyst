@@ -14,6 +14,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
@@ -40,17 +41,18 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ActionComponent } from './action/action.component';
-import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component';
-import { GoalSetterComponent } from './goal-setter/goal-setter.component';
-import { TradeCalendarComponent } from './trade-calendar/trade-calendar.component';
-import { IpoFundingComponent } from './ipo-funding/ipo-funding.component';
-import { UnlistedSharesComponent } from './unlisted-shares/unlisted-shares.component';
-import { P2pLendingComponent } from './p2p-lending/p2p-lending.component';
-import { TradeReplayComponent } from './trade-replay/trade-replay.component';
-import { GoalItemComponent } from './goal-item/goal-item.component';
 import { AddNewGoalDialogComponent } from './add-new-goal-dialog/add-new-goal-dialog.component';
+import { AppRoutingModule } from './app-routing.module';
+import { GoalItemComponent } from './goal-item/goal-item.component';
+import { GoalSetterComponent } from './goal-setter/goal-setter.component';
 import { GoalComponent } from './goal/goal.component';
+import { HomeComponent } from './home/home.component';
+import { IpoFundingComponent } from './ipo-funding/ipo-funding.component';
+import { P2pLendingComponent } from './p2p-lending/p2p-lending.component';
+import { TradeCalendarComponent } from './trade-calendar/trade-calendar.component';
+import { TradeReplayComponent } from './trade-replay/trade-replay.component';
+import { UnlistedSharesComponent } from './unlisted-shares/unlisted-shares.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { GoalComponent } from './goal/goal.component';
     TradeReplayComponent,
     GoalItemComponent,
     AddNewGoalDialogComponent,
-    GoalComponent
+    GoalComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -108,7 +111,8 @@ import { GoalComponent } from './goal/goal.component';
     ScrollingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

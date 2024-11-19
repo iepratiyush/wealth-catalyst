@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { TradeDate } from './trade-date.model';
 
 @Component({
   selector: 'app-trade-calendar',
   templateUrl: './trade-calendar.component.html',
   styleUrls: ['./trade-calendar.component.css']
 })
-export class TradeCalendarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class TradeCalendarComponent {
 
 }
