@@ -14,4 +14,8 @@ export class AppComponent {
   navigateToHome() {
     this.router.navigate(['home']);
   }
+
+  navigateTo(page: string) {
+    this.router.navigate([page]);
+  }
 }

@@ -34,12 +34,13 @@ export class GoalSetterComponent implements OnInit {
             id: this.goals.length + 1,
             icon: result.icon,
             text: result.category,
-            chipText: "Lead",
+            chipText: "Lag",
             startDate: Date.now(),
             endDate: endDate,
             value: 0,
-            bufferValue: 0,
-            currentValue: result.investmentAmount,
+            bufferValue: 100,
+            investmentAmount: result.investmentAmount,
+            currentValue: 0,
             totalValue: result.expectedReturn,
             interestedIn: result.interestedIn
           }

@@ -1,6 +1,8 @@
 .container {
   display: flex;
   justify-content: center;
+  padding: 16px;
+  margin: 16px;
 }
 
 .calendar {
@@ -91,6 +93,10 @@
 
 .custom-cell .events div:hover {
   background-color: #d2e3fc;
+}
+
+.selected-cell {
+  border: 2px solid red;
 }
 
 .add-event {

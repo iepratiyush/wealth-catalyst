@@ -43,16 +43,13 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { ActionComponent } from './action/action.component';
 import { AddNewGoalDialogComponent } from './add-new-goal-dialog/add-new-goal-dialog.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CalendarComponent } from './calendar/calendar.component';
 import { GoalItemComponent } from './goal-item/goal-item.component';
 import { GoalSetterComponent } from './goal-setter/goal-setter.component';
 import { GoalComponent } from './goal/goal.component';
 import { HomeComponent } from './home/home.component';
-import { IpoFundingComponent } from './ipo-funding/ipo-funding.component';
-import { P2pLendingComponent } from './p2p-lending/p2p-lending.component';
 import { TradeCalendarComponent } from './trade-calendar/trade-calendar.component';
 import { TradeReplayComponent } from './trade-replay/trade-replay.component';
-import { UnlistedSharesComponent } from './unlisted-shares/unlisted-shares.component';
-import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -61,9 +58,6 @@ import { CalendarComponent } from './calendar/calendar.component';
     HomeComponent,
     GoalSetterComponent,
     TradeCalendarComponent,
-    IpoFundingComponent,
-    UnlistedSharesComponent,
-    P2pLendingComponent,
     TradeReplayComponent,
     GoalItemComponent,
     AddNewGoalDialogComponent,

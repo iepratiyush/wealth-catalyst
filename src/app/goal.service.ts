@@ -9,94 +9,114 @@ export class GoalService {
       id: 1,
       icon: 'home',
       text: 'Home',
-      chipText: 'Real Estate',
-      startDate: '2021-01-01',
-      endDate: '2022-01-01',
-      value: 75,
+      chipText: 'Lead',
+      startDate: this.getRandomDate(),
+      endDate: this.getEndDate(this.getRandomDate()),
+      value: 50,
       bufferValue: 50,
       currentValue: 500000,
       totalValue: 1000000,
+      investmentAmount: 20000,
       interestedIn: ["Delivery", "Mutual Fund"]
     },
     {
       id: 2,
       icon: 'directions_car',
       text: 'Car',
-      chipText: 'Automobile',
-      startDate: '2021-01-01',
-      endDate: '2022-01-01',
+      chipText: 'Lead',
+      startDate: this.getRandomDate(),
+      endDate: this.getEndDate(this.getRandomDate()),
       value: 60,
-      bufferValue: 30,
+      bufferValue: 40,
       currentValue: 300000,
       totalValue: 500000,
+      investmentAmount: 15000,
       interestedIn: ["Intra Day", "Commodity"]
     },
     {
       id: 3,
       icon: 'school',
       text: 'Education',
-      chipText: 'Higher Education',
-      startDate: '2021-01-01',
-      endDate: '2022-01-01',
+      chipText: 'Lead',
+      startDate: this.getRandomDate(),
+      endDate: this.getEndDate(this.getRandomDate()),
       value: 80,
-      bufferValue: 40,
+      bufferValue: 20,
       currentValue: 800000,
       totalValue: 1000000,
-      interestedIn: [ "All"]
+      investmentAmount: 25000,
+      interestedIn: ["All"]
     },
     {
       id: 4,
       icon: 'flight_takeoff',
       text: 'Travel',
-      chipText: 'Vacation',
-      startDate: '2021-01-01',
-      endDate: '2022-01-01',
+      chipText: 'Lag',
+      startDate: this.getRandomDate(),
+      endDate: this.getEndDate(this.getRandomDate()),
       value: 20,
-      bufferValue: 10,
+      bufferValue: 80,
       currentValue: 20000,
       totalValue: 100000,
+      investmentAmount: 5000,
       interestedIn: ["Delivery", "Mutual Fund"]
     },
     {
       id: 5,
       icon: 'fitness_center',
       text: 'Fitness',
-      chipText: 'Health',
-      startDate: '2021-01-01',
-      endDate: '2022-01-01',
+      chipText: 'Lag',
+      startDate: this.getRandomDate(),
+      endDate: this.getEndDate(this.getRandomDate()),
       value: 10,
-      bufferValue: 5,
+      bufferValue: 90,
       currentValue: 1000,
       totalValue: 10000,
+      investmentAmount: 500,
       interestedIn: ["Intra Day", "Commodity"]
     },
     {
       id: 6,
       icon: 'business',
       text: 'Business',
-      chipText: 'Entrepreneurship',
-      startDate: '2021-01-01',
-      endDate: '2022-01-01',
+      chipText: 'Lead',
+      startDate: this.getRandomDate(),
+      endDate: this.getEndDate(this.getRandomDate()),
       value: 90,
-      bufferValue: 45,
+      bufferValue: 10,
       currentValue: 900000,
       totalValue: 1000000,
-      interestedIn: [ "All"]
+      investmentAmount: 30000,
+      interestedIn: ["All"]
     },
     {
       id: 7,
       icon: 'celebration',
       text: 'Wedding',
-      chipText: 'Wedding',
-      startDate: '2021-01-01',
-      endDate: '2022-01-01',
+      chipText: 'Lead',
+      startDate: this.getRandomDate(),
+      endDate: this.getEndDate(this.getRandomDate()),
       value: 85,
-      bufferValue: 55,
+      bufferValue: 15,
       currentValue: 850000,
       totalValue: 1000000,
+      investmentAmount: 28000,
       interestedIn: ["Delivery", "Mutual Fund"]
     }
   ];
+
+  private getRandomDate(): string {
+    const start = new Date(2024, 0, 1);
+    const end = new Date(2024, 11, 20);
+    const date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+    return date.toISOString().split('T')[0];
+  }
+
+  private getEndDate(startDate: string): string {
+    const start = new Date(startDate);
+    const end = new Date(start.setFullYear(start.getFullYear() + Math.random() * 10));
+    return end.toISOString().split('T')[0];
+  }
 
   addGoal(goal: any) {
     this.goals.push(goal);

@@ -31,6 +31,7 @@ export class CalendarComponent implements OnInit {
     this.currentYear = today.getFullYear();
     this.updateCurrentMonth();
     this.generateCalendar();
+    this.selectedDate = this.dates.find(date => date.day === this.todayDay);
   }
 
   updateCurrentMonth() {

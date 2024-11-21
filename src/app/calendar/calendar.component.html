@@ -9,7 +9,7 @@
       <div *ngFor="let day of days">{{ day }}</div>
     </div>
     <div class="dates">
-      <div *ngFor="let date of dates" class="custom-cell" (click)="selectDate(date)">
+      <div *ngFor="let date of dates" [ngClass]="selectedDate.day === date.day ? 'custom-cell selected-cell': 'custom-cell'" (click)="selectDate(date)">
         <div class="date">{{ date.day }}</div>
         <div class="events">
             <div *ngFor="let event of eventService.getEvents(currentYear, currentMonthIndex, date.day).slice(0, 2)">{{ event }}</div>
@@ -90,7 +90,7 @@
           <mat-divider></mat-divider>
           <div style="display: flex; flex-direction: row; margin-top: 32px;">
             <mat-icon class="avatar-icon" mat-card-avatar>language</mat-icon>
-            <mat-card-title style="font-weight: bold;">RESEARCH & RECOMMENDATIONS</mat-card-title>
+            <mat-card-title style="font-weight: bold;">RESEARCH RECOMMENDATIONS</mat-card-title>
           </div>
           <div style="display: flex; flex-direction: row; justify-content: space-between; margin: 10px">
             <div>
